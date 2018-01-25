@@ -1,6 +1,7 @@
 <template lang="">
   <comics
-    :comics="comics">
+    :comics="comics"
+    :loading="loading">
   </comics>
 </template>
 
@@ -15,6 +16,7 @@ export default {
 
   data () {
     return {
+      loading: false,
       comics: [],
       reversed: [],
       collection: {
@@ -42,6 +44,7 @@ export default {
 
   methods: {
     getComic () {
+      this.loading = true
       window.axios.get('https://gateway.marvel.com/v1/public/comics', {
         params: {
           apikey: this.collection.public_key,
@@ -49,17 +52,19 @@ export default {
         }
       })
         .then(response => {
+          this.loading = false
           this.reversed = response.data.data.results
           this.comics = this.reversed.reverse()
         }).catch(e => {
           console.log(e)
         })
-    }
+    },
   }
 
 }
 </script>
 
 <style lang="css">
+
 
 </style>
