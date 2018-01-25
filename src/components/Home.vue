@@ -2,7 +2,8 @@
   <comics
     :collection="collection"
     :hashed="hashed"
-    :unixtime="unixtime">
+    :unixtime="unixtime"
+    :comics="comics">
   </comics>
 </template>
 
@@ -18,6 +19,7 @@ export default {
 
   data () {
     return {
+      comics: [],
       collection: {
         public_key: '232de3cd47562ba3dce8a33d7118ab13',
         private_key: 'a6caf73e1c2ee99586459bef36ae464e02efd6d4'
@@ -50,12 +52,10 @@ export default {
         }
       })
         .then(response => {
-          console.log(response)
+          this.comics = response.data
         }).catch(e => {
           console.log(e)
         })
-      // this.$route.query.apikey = this.public_key
-      // this.$router.push('/')
     }
   }
 
