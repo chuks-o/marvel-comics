@@ -1,14 +1,25 @@
 <template lang="html">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-md-4" v-for="comic in comics">
-        <div class="thumbnail">
-          <img src="https://static.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg" alt="..." class="img-responsive">
-          <div class="caption">
-            <h3>Thumbnail </h3>
-            <p>{{ comic.results.series.name }}</p>
-            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-          </div>
+  <div class="row">
+    <div class="col s12 m4"  v-for="comic in comics">
+      <div class="card hoverable">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator"
+            :src="comic.thumbnail.path + '.' + comic.thumbnail.extension"
+            alt="...">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">
+            {{ comic.title }}
+            <i class="material-icons right">icon</i>
+          </span>
+          <p><a href="#">Link</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">
+            {{ comic.title }}
+            <i class="material-icons right">X</i>
+          </span>
+          <p>{{ comic.description }}</p>
         </div>
       </div>
     </div>
@@ -17,12 +28,12 @@
 
 <script>
 export default {
-  props: ['collection', 'hashed', 'unixtime', 'comics']
+  props: ['comics']
 }
 </script>
 
 <style lang="css">
-.thumbnail {
-  padding: 0 !important;
+.row {
+  margin-top: 10px !important;
 }
 </style>
