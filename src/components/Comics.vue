@@ -1,34 +1,37 @@
 <template lang="html">
   <div class="container">
     <div class="row">
-
+      <div class="">
+        <a href="http://marvel.com">Data provided by Marvel. © 2018 MARVEL</a>
+      </div>
       <div class="col s12 m6" v-for="comic in comics">
         <div class="card hoverable">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator"
-            :src="comic.thumbnail.path + '.' + comic.thumbnail.extension"
-            alt="...">
+              :src="comic.thumbnail.path + '.' + comic.thumbnail.extension"
+              alt="...">
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">
               <!-- {{ comic.title }} -->
               <i class="material-icons right">icon</i>
             </span>
-            <p><a href="#">Link</a></p>
+            <!-- <p><a href="#">Link</a></p> -->
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">
-              {{ comic.title }}
-              <i class="material-icons right">X</i>
+              <i class="material-icons right">x</i>
             </span>
+            {{ comic.title }}
             <p>{{ comic.description }}</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div v-if="loading">
+    <div v-if="loading" id="loading-spinner">
       <spinner></spinner>
+      <p id="loading-para">Loading...</p>
     </div>
   </div>
 </template>
@@ -48,7 +51,13 @@ export default {
   margin-top: 30px !important;
 }
 img {
-  height: 300px !important;
-  max-height: 300px !important;
+  height: 350px !important;
+  max-height: 350px !important;
+}
+#loading-spinner {
+  margin-top: 150px !important;
+}
+#loading-para {
+  margin-top: 30px !important;
 }
 </style>
