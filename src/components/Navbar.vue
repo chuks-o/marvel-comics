@@ -3,7 +3,7 @@
     <div class="nav-wrapper">
       <a href="/" class="brand-logo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/MarvelLogo.svg/2000px-MarvelLogo.svg.png" 
-          alt="">
+          alt="Logo">
       </a>
       <ul id="slide-out" class="side-nav">
         <li><div class="user-view">
