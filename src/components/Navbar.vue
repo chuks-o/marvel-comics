@@ -1,13 +1,16 @@
 <template id="">
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Marvel Comics</a>
+      <a href="/" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/MarvelLogo.svg/2000px-MarvelLogo.svg.png" 
+          alt="">
+      </a>
       <ul id="slide-out" class="side-nav">
         <li><div class="user-view">
           <div class="background">
-            <img src="images/office.jpg">
+            <img src="">
           </div>
-          <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+          <a href="#!user"><img class="circle" src=""></a>
           <a href="#!name"><span class="white-text name">John Doe</span></a>
           <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
         </div></li>
@@ -23,19 +26,23 @@
   </nav>
 </template>
 
-<script>
+<script> 
 export default {
 
 }
 </script>
 
 <style scoped>
-.navbar-default {
-  margin-bottom: 30px;
-  background-color: #b14;
+.brand-logo img {
+  height: 50px !important;
+  width: 150px !important;
+  margin-top: 5px;
+  margin-right: 10px;
 }
-nav a{
-  color: white !important;
+
+nav {
+  background: white !important;
 }
+
 
 </style>

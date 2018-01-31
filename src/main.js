@@ -5,11 +5,15 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 require('materialize-css/dist/css/materialize.css')
-require('materialize-css/dist/js/materialize.js')
+require('materialize-css/dist/js/materialize.js');
+
 
 window.axios = axios
 
 Vue.config.productionTip = false
+
+// export const EventBus = new Vue();
+
 
 /* eslint-disable no-new */
 new Vue({

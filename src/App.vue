@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <navigation></navigation>
-    <router-view/>
+    <transition name="fade">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -22,5 +24,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-image: url("assets/marvel-image.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fade-enter-active, .fade-leave-active {
+      transition: opacity .5s
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 </style>
