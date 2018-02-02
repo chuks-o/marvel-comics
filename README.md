@@ -1,3 +1,4 @@
+>>>>>>> HEAD
 # marvel-comica
 
 > A Vue.js project
@@ -19,3 +20,6 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# A Marvel Comics application built for fun with Vue JS
+>>>>>>> 610b46787a29394a76398f9c1d0b7a065ea85914
